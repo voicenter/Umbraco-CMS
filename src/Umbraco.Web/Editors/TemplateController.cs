@@ -100,6 +100,9 @@ namespace Umbraco.Web.Editors
         public TemplateDisplay PostSave(TemplateDisplay display)
         {
 
+            // Todo : Add Vue NUXT.JS Validation
+            // we can used  : https://nuxtjs.org/api/nuxt-render-and-get-window
+
             //Checking the submitted is valid with the Required attributes decorated on the ViewModel
             if (ModelState.IsValid == false)
             {
@@ -166,7 +169,14 @@ namespace Umbraco.Web.Editors
                     }
                 }
 
+
+                // Todo : Add Vue NUXT.JS Validation
+                // we need to save in Layout   : https://nuxtjs.org/api/pages-layout
+                // Need to Create a new  SaveTemplateNuxtLayout
+
                 Services.FileService.SaveTemplate(template);
+
+                Services.FileService.SaveTemplateNuxtLayout(template);
 
                 if (changeAlias)
                 {

@@ -503,6 +503,32 @@ namespace Umbraco.Core.Services
                 uow.Commit();
             }
         }
+        /// <summary>
+        /// Saves a Nuxt Layout  <see cref="Template"/> 
+        /// </summary>
+        /// <param name="template"><see cref="Template"/> to save</param>
+        /// <param name="userId"></param>
+        public void SaveTemplateNuxtLayout(ITemplate template, int userId = 0)
+        {
+
+            // ToDo: Add Filesystem Save into /Nuxt/Layout/ 
+            //using (var uow = UowProvider.GetUnitOfWork())
+            //{
+            //    if (uow.Events.DispatchCancelable(SavingTemplate, this, new SaveEventArgs<ITemplate>(template)))
+            //    {
+            //        uow.Commit();
+            //        return;
+            //    }
+
+            //    var repository = RepositoryFactory.CreateTemplateRepository(uow);
+            //    repository.AddOrUpdate(template);
+
+            //    uow.Events.Dispatch(SavedTemplate, this, new SaveEventArgs<ITemplate>(template, false));
+
+            //    Audit(uow, AuditType.Save, "Save Template performed by user", userId, template.Id);
+            //    uow.Commit();
+            //}
+        }
 
         /// <summary>
         /// Saves a collection of <see cref="Template"/> objects

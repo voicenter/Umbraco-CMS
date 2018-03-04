@@ -198,6 +198,16 @@ namespace Umbraco.Core.Services
         void SaveTemplate(ITemplate template, int userId = 0);
 
         /// <summary>
+        /// Saves a <see cref="ITemplate"/>
+        /// </summary>
+        /// <param name="template"><see cref="ITemplate"/>  to save as NuxtLayout</param>
+        /// <param name="userId">Optional id of the user saving the template</param>
+        /// 
+        void SaveTemplateNuxtLayout(ITemplate template, int userId = 0);
+
+        
+
+        /// <summary>
         /// Creates a template for a content type
         /// </summary>
         /// <param name="contentTypeAlias"></param>
